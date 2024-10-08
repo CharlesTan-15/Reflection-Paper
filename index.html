@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy Awareness</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #555353;
+        }
+        header {
+            background: #161616;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background: #202020;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .word-counter {
+            text-align: center;
+            font-size: 14px;
+            color: #8f3e3e;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Reflection Paper</h1></header>
+    
+    <main>
+        <h3>Topic: Data Privacy And Cyber Awareness</h3>
+        <h4>Oct 8, 2024</h4>
+        
+        <div class="word-counter">
+            Word Count: <span id="wordCount">0</span>
+        </div>
+
+        <div id="processed-paragraphs"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Data Privacy Awareness Campaign</p>
+    </footer>
+
+    <py-script>
+        from js import document
+
+        # Original paragraphs as a list
+        paragraphs = [
+            "Attending the Campaign on Data Privacy and Cyber Awareness made me realize how important it is to understand data security, especially today, where scams, phishing, and cybercrime are common. These incidents happen all the time, and often, we don’t even notice. That’s why we need to learn how to avoid and prevent these dangers in our lives. The speaker pointed out that while gathering data is easy, keeping that data safe is much harder.",
+            
+            "In today’s digital world, we can never be completely sure when our personal information is being collected by companies, apps, or websites. If a company fails to protect its users’ personal information and has a data breach, it can face penalties from the National Privacy Commission (NPC). This shows how important data security is and the responsibility companies have to keep our information safe.",
+            
+            "Furthermore, it shouldn’t be too easy for companies to collect our personal information. Ultimately, it should be up to each person to decide if they agree to share their data. For instance, when someone posts a photo on social media platforms like Facebook, Instagram, or TikTok, they are giving these companies permission to use their data. Many people don’t understand the consequences of their online actions, which makes it easy for them to be tricked into sharing their information.",
+            
+            "It’s essential for users to think carefully about what they post online and the possible results of sharing. We can share our data in safer ways. It’s important to be careful about what we reveal online. Sharing non-confidential data, like general thoughts or everyday experiences, is usually fine.",
+            
+            "However, sharing sensitive information like credit card numbers, Social Security numbers, and locations can create big risks. I believe we should share less of this type of information to avoid scams and cybercrime. The less personal data we share, the smaller the chance it will get into the wrong hands. As an IT student, this experience has opened my eyes to the huge world of information technology.",
+            
+            "There is so much more to learn about how our data is used and protected. The more we know, the better we will be at navigating the digital world. It’s our duty to be careful and active in protecting our personal information. We must keep learning about data privacy and security.",
+            
+            "In conclusion, the Campaign on Data Privacy and Cyber Awareness has made a strong impact on me. It has helped me understand the importance of data security and the risks of sharing too much information online. As we keep using technology and social media every day, it’s crucial to know our rights and the dangers of using these services and sharing personal data.",
+            
+            "By being informed, we can protect ourselves and our information from falling victim to cybercrime. This awareness is especially important for everyone, particularly students and young adults who are more connected in a digital world. It’s also important to discuss how technology is changing rapidly. New tools and apps are being created every day, which means we need to stay updated.",
+            
+            "The internet is a powerful resource, but it can also be a place where our information is at risk. Therefore, understanding data privacy should be a continuous effort. We should not only rely on companies to protect us but also take steps ourselves. This might include regularly changing our passwords, being cautious about what we share online, and using privacy settings on social media accounts."
+        ]
+
+        # Combine paragraphs into a single string with formatting
+        processed_text = "<br><br>".join(paragraphs)
+
+        # Update the processed paragraphs in the HTML
+        document.getElementById("processed-paragraphs").innerHTML = processed_text
+        
+        # Calculate and display the word count
+        word_count = sum(len(p.split()) for p in paragraphs)
+        document.getElementById("wordCount").innerHTML = word_count
+    </py-script>
+
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</body>
+</html>
